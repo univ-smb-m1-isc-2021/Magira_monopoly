@@ -18,6 +18,9 @@ public class Main {
 				System.out.println("Quel est le nom du joueur " + i + " ?");
 				res = scan.nextLine();
 				joueurs.add(new Joueur(res));
+
+				joueurs.add(new Joueur(res));
+				
 			}
 	    	System.out.println("Tout est prêt, le jeu peut commencer !");
 	    	lancerJeu(joueurs);
