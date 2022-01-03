@@ -1,3 +1,4 @@
+package main.java;
 
 public class EtatLibre implements Etat{
 

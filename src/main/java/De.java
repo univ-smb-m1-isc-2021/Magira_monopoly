@@ -1,3 +1,4 @@
+package main.java;
 
 public class De {
 	public static int lancer(){

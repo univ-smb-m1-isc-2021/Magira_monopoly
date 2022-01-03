@@ -1,3 +1,4 @@
+package main.java;
 
 public class CasePropriete extends Case{
 	public final int prixAchat;
