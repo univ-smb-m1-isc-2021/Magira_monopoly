@@ -19,7 +19,7 @@ public class Gare extends CasePropriete{
 				setProprietaire(joueur);
 				libre = !libre;
 			} else {
-				//S'il refuse d'acheter il peut vouloir faire une autre action
+				//S'il refuse d'acheter il peut vouloir faire une autre action!!
 			}
 		} else {
 			if(!estProprietaire(joueur)) {
