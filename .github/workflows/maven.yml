@@ -1,19 +1,16 @@
-name: Java CI with Maven
-
+name: Build
 on:
   push:
-    branches: 
-      - main
+    branches:
+      - master
   pull_request:
     types: [opened, synchronize, reopened]
-
 jobs:
   build:
-
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Set up JDK 11
@@ -37,15 +34,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=univ-smb-m1-isc-2021_Magira_monopoly
-
-And you are done!
-
-You should see the page refresh itself in a few moments with your analysis results if everything runs successfully.
-
-You’ll get a first analysis of your default branch
-Each new push you make on a branch or Pull Request will automatically trigger a new analysis
-
-    Each new Pull Request you create will automatically be analyzed
-
-Check these useful links while you wait: What is a Quality Gate?, Configure your Quality Profiles
-© 2008-2022, SonarCloud by SonarSource SA. All rights reserved.
