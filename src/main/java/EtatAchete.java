@@ -10,13 +10,11 @@ public class EtatAchete implements Etat{
 
 	@Override
 	public void joueurArrive(Joueur j) {
-		if(!ctx.estProprietaire(j)) {
-			if(j.paye(ctx.loyer)) {
-				ctx.getProprietaire().recois(ctx.loyer);
-			} else {
-				//Le joueur dois hypothequer sa maison				
-				ctx.getProprietaire().recois(ctx.loyer);
-			}
+		if(!ctx.estProprietaire(j) && j.paye(ctx.loyer)) {
+			ctx.getProprietaire().recois(ctx.loyer);
+		}else if(!j.paye(ctx.loyer)) {
+			//Le joueur dois hypothequer sa maison				
+			ctx.getProprietaire().recois(ctx.loyer);
 		}
 	}
 
