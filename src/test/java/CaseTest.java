@@ -6,4 +6,8 @@ import main.java.Case;
 
 public class CaseTest {
 
+	@Test
+	public void TestCase() {
+		
+	}
 }
